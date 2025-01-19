@@ -47,6 +47,6 @@ app.use('*', async(req, res) => {
     res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT_SERVER || 21014, () => {
     console.log('http://localhost:3000')
 })
